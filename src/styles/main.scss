@@ -1,0 +1,19 @@
+@import './abstract//variables';
+@import './abstract/mixins';
+@import './abstract//functions';
+
+@import './base/base';
+@import './base/animations';
+@import './base/utilities';
+
+@import './components/sidebar';
+@import './components/header';
+@import './components/realtors';
+@import './components/features';
+@import './components/story';
+@import './components/homes';
+@import './components/gallery';
+@import './components/footer';
+
+
+// import any components like buttons, form, etc.. as they are created
