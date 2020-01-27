@@ -1,8 +1,14 @@
 @import '../main.scss';
 
 .container {
-  // background-color: $color-grey-dark-1;
-  height: 100vh;
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: [sidebar-start] 5rem [sidebar-end full-start] minmax(3.75rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 8rem) [col-end]) [center-end] minmax(3.75rem,1fr) [full-end];
+
+  & > * {
+    padding: 40px;
+    font-size: 2rem;
+  }
 }
 
 
