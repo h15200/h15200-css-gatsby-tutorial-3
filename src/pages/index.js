@@ -1,4 +1,11 @@
 import React, { Fragment } from 'react'
+import Globe from '../images/global.svg'
+import Trophy from '../images/trophy.svg'
+import Pin from '../images/map-pin.svg'
+import Key from '../images/key.svg'
+import Presentation from '../images/presentation.svg'
+import Lock from '../images/lock.svg'
+
 
 import Head from '../components/helmetHead'
 
@@ -23,7 +30,42 @@ const IndexPage = () => {
         </div>
 
         <section className={indexStyles.features}>
-          Features
+          <div className={indexStyles.feature}>
+            <Globe className={indexStyles.feature_icon} />
+            <h4 className={indexStyles.heading_4}>World's best luxury homes</h4>
+            <p className={indexStyles.feature_text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit maxime architecto qui autem.</p>
+          </div>
+
+          <div className={indexStyles.feature}>
+            <Trophy className={indexStyles.feature_icon} />
+            <h4 className={indexStyles.heading_4}>Only the best properties</h4>
+            <p className={indexStyles.feature_text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet deserunt assumenda quam quos!</p>
+          </div>
+
+          <div className={indexStyles.feature}>
+            <Pin className={indexStyles.feature_icon} />
+            <h4 className={indexStyles.heading_4}>All homes in the best locations</h4>
+            <p className={indexStyles.feature_text}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+
+          <div className={indexStyles.feature}>
+            <Key className={indexStyles.feature_icon} />
+            <h4 className={indexStyles.heading_4}>New home in one week</h4>
+            <p className={indexStyles.feature_text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta non sint accusamus nam harum!</p>
+          </div>
+
+          <div className={indexStyles.feature}>
+            <Presentation className={indexStyles.feature_icon} />
+            <h4 className={indexStyles.heading_4}>Top 1% realtors</h4>
+            <p className={indexStyles.feature_text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, non voluptates?</p>
+          </div>
+
+          <div className={indexStyles.feature}>
+            <Lock className={indexStyles.feature_icon} />
+            <h4 className={indexStyles.heading_4}>Secure payments on Nexter</h4>
+            <p className={indexStyles.feature_text}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+  
         </section>
 
         <div className={indexStyles.story_pictures}>

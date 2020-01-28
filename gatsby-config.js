@@ -22,5 +22,13 @@ module.exports = {
         lang: 'en'
       }
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/ // Or wherever the dir is with svgs
+        }
+      }
+    },
   ]
 }
