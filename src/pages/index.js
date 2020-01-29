@@ -128,9 +128,9 @@ const IndexPage = () => {
         </section>
 
         <div className={indexStyles.story_pictures}>
-        <div className={indexStyles.story_backgroundContainer}><Img className={indexStyles.story_background} fluid={data.background.childImageSharp.fluid} alt="A meadow"/></div>
-        <div className={indexStyles.story_img1Container}><Img className={indexStyles.story_img1} fluid={data.storyOne.childImageSharp.fluid} alt="Couple with new house"/></div>
-        <div className={indexStyles.story_img2Container}><Img className={indexStyles.story_img2} fluid={data.storyTwo.childImageSharp.fluid} alt="New house"/></div>
+        <Img className={indexStyles.story_background} fluid={data.background.childImageSharp.fluid} alt="A meadow"/>
+        <Img className={indexStyles.story_img1} fluid={data.storyOne.childImageSharp.fluid} alt="Couple with new house"/>
+       <Img className={indexStyles.story_img2} fluid={data.storyTwo.childImageSharp.fluid} alt="New house"/>
         </div>
 
         <div className={indexStyles.story_content}>
