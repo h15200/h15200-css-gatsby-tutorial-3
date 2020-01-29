@@ -1,12 +1,15 @@
 import React, { Fragment } from "react"
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Globe from "../images/global.svg"
 import Trophy from "../images/trophy.svg"
 import Pin from "../images/map-pin.svg"
 import Key from "../images/key.svg"
 import Presentation from "../images/presentation.svg"
 import Lock from "../images/lock.svg"
+import Heart from "../images/heart.svg"
+import Profile from "../images/profile-male.svg"
+import Expand from "../images/expand.svg"
 
 import Head from "../components/helmetHead"
 
@@ -15,24 +18,66 @@ import indexStyles from "../styles/Modules/index.module.scss"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-      query {
+    query {
       storyOne: file(relativePath: { eq: "story-1.jpeg" }) {
         childImageSharp {
-          fluid (maxWidth: 1000){
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      storyTwo: file(relativePath: { eq: "story-2.jpeg"}) {
+      storyTwo: file(relativePath: { eq: "story-2.jpeg" }) {
         childImageSharp {
-          fluid (maxWidth:1000) {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      background: file(relativePath: { eq: "back.jpg"}) {
+      background: file(relativePath: { eq: "back.jpg" }) {
         childImageSharp {
-          fluid (maxWidth:1300) {
+          fluid(maxWidth: 1300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      houseOne: file(relativePath: { eq: "house-1.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      houseTwo: file(relativePath: { eq: "house-2.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      houseThree: file(relativePath: { eq: "house-3.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      houseFour: file(relativePath: { eq: "house-4.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      houseFive: file(relativePath: { eq: "house-5.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      houseSix: file(relativePath: { eq: "house-6.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -128,14 +173,30 @@ const IndexPage = () => {
         </section>
 
         <div className={indexStyles.story_pictures}>
-        <Img className={indexStyles.story_background} fluid={data.background.childImageSharp.fluid} alt="A meadow"/>
-        <Img className={indexStyles.story_img1} fluid={data.storyOne.childImageSharp.fluid} alt="Couple with new house"/>
-       <Img className={indexStyles.story_img2} fluid={data.storyTwo.childImageSharp.fluid} alt="New house"/>
+          <Img
+            className={indexStyles.story_background}
+            fluid={data.background.childImageSharp.fluid}
+            alt="A meadow"
+          />
+          <Img
+            className={indexStyles.story_img1}
+            fluid={data.storyOne.childImageSharp.fluid}
+            alt="Couple with new house"
+          />
+          <Img
+            className={indexStyles.story_img2}
+            fluid={data.storyTwo.childImageSharp.fluid}
+            alt="New house"
+          />
         </div>
 
         <div className={indexStyles.story_content}>
-          <h3 className={`${indexStyles.heading_3} ${indexStyles.u_mb_small}`}>Happy Customers</h3>
-          <h2 className={`${indexStyles.heading_2} ${indexStyles.heading_2___dark} ${indexStyles.u_mb_medium}`}>
+          <h3 className={`${indexStyles.heading_3} ${indexStyles.u_mb_small}`}>
+            Happy Customers
+          </h3>
+          <h2
+            className={`${indexStyles.heading_2} ${indexStyles.heading_2___dark} ${indexStyles.u_mb_medium}`}
+          >
             &ldquo;The best decision of our lives&rdquo;
           </h2>
           <p className={indexStyles.story_text}>
@@ -145,7 +206,181 @@ const IndexPage = () => {
           <button className={`${indexStyles.btn}`}>Find your own home</button>
         </div>
 
-        <section className={indexStyles.homes}>Homes</section>
+        <section className={indexStyles.homes}>
+          <div className={indexStyles.home}>
+            <Img
+              className={indexStyles.home_img}
+              fluid={data.houseOne.childImageSharp.fluid}
+              alt="home"
+            />
+            <Heart className={indexStyles.home_like} />
+            <h5 className={indexStyles.home_name}>Beautiful Family House</h5>
+            <div className={indexStyles.home_location}>
+              <Pin className={indexStyles.home_location___icon} />
+              <p className={indexStyles.home_location___text}>USA</p>
+            </div>
+            <div className={indexStyles.home_rooms}>
+              <Profile className={indexStyles.home_rooms___icon} />
+              <p className={indexStyles.home_rooms___text}>5 rooms</p>
+            </div>
+            <div className={indexStyles.home_area}>
+              <Expand className={indexStyles.home_area___icon} />
+              <p className={indexStyles.home_area___text}>
+                325 m<sup>2</sup>
+              </p>
+            </div>
+            <div className={indexStyles.home_price}>
+              <Key className={indexStyles.home_price___icon} />
+              <p className={indexStyles.home_price___text}>$1,200,000</p>
+            </div>
+            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>Contact realtor</button>
+          </div>
+
+          <div className={indexStyles.home}>
+            <Img
+              className={indexStyles.home_img}
+              fluid={data.houseTwo.childImageSharp.fluid}
+              alt="home"
+            />
+            <Heart className={indexStyles.home_like} />
+            <h5 className={indexStyles.home_name}>Modern Glass Villa</h5>
+            <div className={indexStyles.home_location}>
+              <Pin className={indexStyles.home_location___icon} />
+              <p className={indexStyles.home_location___text}>Canada</p>
+            </div>
+            <div className={indexStyles.home_rooms}>
+              <Profile className={indexStyles.home_rooms___icon} />
+              <p className={indexStyles.home_rooms___text}>6 rooms</p>
+            </div>
+            <div className={indexStyles.home_area}>
+              <Expand className={indexStyles.home_area___icon} />
+              <p className={indexStyles.home_area___text}>
+                460 m<sup>2</sup>
+              </p>
+            </div>
+            <div className={indexStyles.home_price}>
+              <Key className={indexStyles.home_price___icon} />
+              <p className={indexStyles.home_price___text}>$2,750,000</p>
+            </div>
+            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>Contact realtor</button>
+          </div>
+
+          <div className={indexStyles.home}>
+            <Img
+              className={indexStyles.home_img}
+              fluid={data.houseThree.childImageSharp.fluid}
+              alt="home"
+            />
+            <Heart className={indexStyles.home_like} />
+            <h5 className={indexStyles.home_name}>Cozy country house</h5>
+            <div className={indexStyles.home_location}>
+              <Pin className={indexStyles.home_location___icon} />
+              <p className={indexStyles.home_location___text}>UK</p>
+            </div>
+            <div className={indexStyles.home_rooms}>
+              <Profile className={indexStyles.home_rooms___icon} />
+              <p className={indexStyles.home_rooms___text}>4 rooms</p>
+            </div>
+            <div className={indexStyles.home_area}>
+              <Expand className={indexStyles.home_area___icon} />
+              <p className={indexStyles.home_area___text}>
+                250 m<sup>2</sup>
+              </p>
+            </div>
+            <div className={indexStyles.home_price}>
+              <Key className={indexStyles.home_price___icon} />
+              <p className={indexStyles.home_price___text}>$850,000</p>
+            </div>
+            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>Contact realtor</button>
+          </div>
+
+          <div className={indexStyles.home}>
+            <Img
+              className={indexStyles.home_img}
+              fluid={data.houseFour.childImageSharp.fluid}
+              alt="home"
+            />
+            <Heart className={indexStyles.home_like} />
+            <h5 className={indexStyles.home_name}>Large Rustic Villa</h5>
+            <div className={indexStyles.home_location}>
+              <Pin className={indexStyles.home_location___icon} />
+              <p className={indexStyles.home_location___text}>Portugal</p>
+            </div>
+            <div className={indexStyles.home_rooms}>
+              <Profile className={indexStyles.home_rooms___icon} />
+              <p className={indexStyles.home_rooms___text}>6 rooms</p>
+            </div>
+            <div className={indexStyles.home_area}>
+              <Expand className={indexStyles.home_area___icon} />
+              <p className={indexStyles.home_area___text}>
+                480 m<sup>2</sup>
+              </p>
+            </div>
+            <div className={indexStyles.home_price}>
+              <Key className={indexStyles.home_price___icon} />
+              <p className={indexStyles.home_price___text}>$1,950,000</p>
+            </div>
+            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>Contact realtor</button>
+          </div>
+
+          <div className={indexStyles.home}>
+            <Img
+              className={indexStyles.home_img}
+              fluid={data.houseFive.childImageSharp.fluid}
+              alt="home"
+            />
+            <Heart className={indexStyles.home_like} />
+            <h5 className={indexStyles.home_name}>Majestic Palace House</h5>
+            <div className={indexStyles.home_location}>
+              <Pin className={indexStyles.home_location___icon} />
+              <p className={indexStyles.home_location___text}>Germany</p>
+            </div>
+            <div className={indexStyles.home_rooms}>
+              <Profile className={indexStyles.home_rooms___icon} />
+              <p className={indexStyles.home_rooms___text}>18 rooms</p>
+            </div>
+            <div className={indexStyles.home_area}>
+              <Expand className={indexStyles.home_area___icon} />
+              <p className={indexStyles.home_area___text}>
+                4230 m<sup>2</sup>
+              </p>
+            </div>
+            <div className={indexStyles.home_price}>
+              <Key className={indexStyles.home_price___icon} />
+              <p className={indexStyles.home_price___text}>$9,500,000</p>
+            </div>
+            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>Contact realtor</button>
+          </div>
+
+          <div className={indexStyles.home}>
+            <Img
+              className={indexStyles.home_img}
+              fluid={data.houseSix.childImageSharp.fluid}
+              alt="home"
+            />
+            <Heart className={indexStyles.home_like} />
+            <h5 className={indexStyles.home_name}>Modern Family Apartment</h5>
+            <div className={indexStyles.home_location}>
+              <Pin className={indexStyles.home_location___pin} />
+              <p className={indexStyles.home_location___text}>Italy</p>
+            </div>
+            <div className={indexStyles.home_rooms}>
+              <Profile className={indexStyles.home_rooms___icon} />
+              <p className={indexStyles.home_rooms___text}>3 rooms</p>
+            </div>
+            <div className={indexStyles.home_area}>
+              <Expand className={indexStyles.home_area___icon} />
+              <p className={indexStyles.home_area___text}>
+                180 m<sup>2</sup>
+              </p>
+            </div>
+            <div className={indexStyles.home_price}>
+              <Key className={indexStyles.home_price___icon} />
+              <p className={indexStyles.home_price___text}>$600,000</p>
+            </div>
+            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>Contact realtor</button>
+          </div>
+        </section>
 
         <section className={indexStyles.gallery}>Gallery</section>
 
