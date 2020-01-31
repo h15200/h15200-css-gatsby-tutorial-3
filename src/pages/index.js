@@ -82,13 +82,113 @@ const IndexPage = () => {
           }
         }
       }
+      gal_1: file(relativePath: { eq: "gal-1.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      gal_2: file(relativePath: { eq: "gal-2.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      gal_3: file(relativePath: { eq: "gal-3.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      gal_4: file(relativePath: { eq: "gal-4.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      gal_5: file(relativePath: { eq: "gal-5.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      gal_6: file(relativePath: { eq: "gal-6.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      gal_7: file(relativePath: { eq: "gal-7.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      gal_8: file(relativePath: { eq: "gal-8.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      gal_9: file(relativePath: { eq: "gal-9.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      gal_10: file(relativePath: { eq: "gal-10.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      gal_11: file(relativePath: { eq: "gal-11.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      gal_12: file(relativePath: { eq: "gal-12.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      gal_13: file(relativePath: { eq: "gal-13.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      gal_14: file(relativePath: { eq: "gal-14.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   return (
     <Fragment>
       <Head title="Home" />
       <div className={indexStyles.container}>
-        <div className={indexStyles.sidebar}>Sidebar</div>
+        <div className={indexStyles.sidebar}>
+          <button className={indexStyles.nav_btn}></button>
+        </div>
 
         <header className={indexStyles.header}>Header</header>
 
@@ -233,7 +333,9 @@ const IndexPage = () => {
               <Key className={indexStyles.home_price___icon} />
               <p className={indexStyles.home_price___text}>$1,200,000</p>
             </div>
-            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>Contact realtor</button>
+            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>
+              Contact realtor
+            </button>
           </div>
 
           <div className={indexStyles.home}>
@@ -262,7 +364,9 @@ const IndexPage = () => {
               <Key className={indexStyles.home_price___icon} />
               <p className={indexStyles.home_price___text}>$2,750,000</p>
             </div>
-            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>Contact realtor</button>
+            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>
+              Contact realtor
+            </button>
           </div>
 
           <div className={indexStyles.home}>
@@ -291,7 +395,9 @@ const IndexPage = () => {
               <Key className={indexStyles.home_price___icon} />
               <p className={indexStyles.home_price___text}>$850,000</p>
             </div>
-            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>Contact realtor</button>
+            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>
+              Contact realtor
+            </button>
           </div>
 
           <div className={indexStyles.home}>
@@ -320,7 +426,9 @@ const IndexPage = () => {
               <Key className={indexStyles.home_price___icon} />
               <p className={indexStyles.home_price___text}>$1,950,000</p>
             </div>
-            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>Contact realtor</button>
+            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>
+              Contact realtor
+            </button>
           </div>
 
           <div className={indexStyles.home}>
@@ -349,7 +457,9 @@ const IndexPage = () => {
               <Key className={indexStyles.home_price___icon} />
               <p className={indexStyles.home_price___text}>$9,500,000</p>
             </div>
-            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>Contact realtor</button>
+            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>
+              Contact realtor
+            </button>
           </div>
 
           <div className={indexStyles.home}>
@@ -378,13 +488,98 @@ const IndexPage = () => {
               <Key className={indexStyles.home_price___icon} />
               <p className={indexStyles.home_price___text}>$600,000</p>
             </div>
-            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>Contact realtor</button>
+            <button className={`${indexStyles.btn} ${indexStyles.btn___home}`}>
+              Contact realtor
+            </button>
           </div>
         </section>
 
-        <section className={indexStyles.gallery}>Gallery</section>
+        <section className={indexStyles.gallery}>
+          <Img
+            className={`${indexStyles.gallery_image} ${indexStyles.gallery_image___1}`}
+            fluid={data.gal_1.childImageSharp.fluid}
+            alt="gallery image-1"
+          />
+          <Img
+            className={`${indexStyles.gallery_image} ${indexStyles.gallery_image___2}`}
+            fluid={data.gal_2.childImageSharp.fluid}
+            alt="gallery image-2"
+          />
+          <Img
+            className={`${indexStyles.gallery_image} ${indexStyles.gallery_image___3}`}
+            fluid={data.gal_3.childImageSharp.fluid}
+            alt="gallery image-3"
+          />
+          <Img
+            className={`${indexStyles.gallery_image} ${indexStyles.gallery_image___4}`}
+            fluid={data.gal_4.childImageSharp.fluid}
+            alt="gallery image-4"
+          />
+          <Img
+            className={`${indexStyles.gallery_image} ${indexStyles.gallery_image___5}`}
+            fluid={data.gal_5.childImageSharp.fluid}
+            alt="gallery image-5"
+          />
+          <Img
+            className={`${indexStyles.gallery_image} ${indexStyles.gallery_image___6}`}
+            fluid={data.gal_6.childImageSharp.fluid}
+            alt="gallery image-6"
+          />
+          <Img
+            className={`${indexStyles.gallery_image} ${indexStyles.gallery_image___7}`}
+            fluid={data.gal_7.childImageSharp.fluid}
+            alt="gallery image-7"
+          />
+          <Img
+            className={`${indexStyles.gallery_image} ${indexStyles.gallery_image___8}`}
+            fluid={data.gal_8.childImageSharp.fluid}
+            alt="gallery image-8"
+          />
+          <Img
+            className={`${indexStyles.gallery_image} ${indexStyles.gallery_image___9}`}
+            fluid={data.gal_9.childImageSharp.fluid}
+            alt="gallery image-9"
+          />
+          <Img
+            className={`${indexStyles.gallery_image} ${indexStyles.gallery_image___10}`}
+            fluid={data.gal_10.childImageSharp.fluid}
+            alt="gallery image-10"
+          />
+          <Img
+            className={`${indexStyles.gallery_image} ${indexStyles.gallery_image___11}`}
+            fluid={data.gal_11.childImageSharp.fluid}
+            alt="gallery image-11"
+          />
+          <Img
+            className={`${indexStyles.gallery_image} ${indexStyles.gallery_image___12}`}
+            fluid={data.gal_12.childImageSharp.fluid}
+            alt="gallery image-12"
+          />
+          <Img
+            className={`${indexStyles.gallery_image} ${indexStyles.gallery_image___13}`}
+            fluid={data.gal_13.childImageSharp.fluid}
+            alt="gallery image-13"
+          />
+          <Img
+            className={`${indexStyles.gallery_image} ${indexStyles.gallery_image___14}`}
+            fluid={data.gal_14.childImageSharp.fluid}
+            alt="gallery image-14"
+          />
+        </section>
 
-        <footer className={indexStyles.footer}>Footer</footer>
+        <footer className={indexStyles.footer}>
+          <ul className={indexStyles.nav}>
+            <li className={indexStyles.nav_item}><a href="#" className={indexStyles.nav_link}>Find your dream home</a></li>
+            <li className={indexStyles.nav_item}><a href="#" className={indexStyles.nav_link}>Request proposal</a></li>
+            <li className={indexStyles.nav_item}><a href="#" className={indexStyles.nav_link}>Download home planner</a></li>
+            <li className={indexStyles.nav_item}><a href="#" className={indexStyles.nav_link}>Contact us</a></li>
+            <li className={indexStyles.nav_item}><a href="#" className={indexStyles.nav_link}>Submit your property</a></li>
+            <li className={indexStyles.nav_item}><a href="#" className={indexStyles.nav_link}>Come work with us!</a></li>
+          </ul>
+          <p className={indexStyles.copyright}>
+            &copy; Copyright 2020
+          </p>
+        </footer>
       </div>
     </Fragment>
   )
