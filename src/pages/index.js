@@ -180,6 +180,48 @@ const IndexPage = () => {
           }
         }
       }
+      headerLogo: file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      logoOne: file(relativePath: { eq: "logo-bbc.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      logoTwo: file(relativePath: { eq: "logo-bi.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      logoThree: file(relativePath: { eq: "logo-forbes.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      logoFour: file(relativePath: { eq: "logo-techcrunch.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      hero: file(relativePath: { eq: "hero.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 700) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   return (
@@ -190,7 +232,35 @@ const IndexPage = () => {
           <button className={indexStyles.nav_btn}></button>
         </div>
 
-        <header className={indexStyles.header}>Header</header>
+        <header className={indexStyles.header}>
+          <Img
+            fluid={data.hero.childImageSharp.fluid}
+            alt="hero"
+            className={indexStyles.header_hero}
+            style={{ position: "absolute" }}
+          />
+          <div className={indexStyles.header_logoContainer}>
+            <Img
+              fluid={data.headerLogo.childImageSharp.fluid}
+              alt="logo"
+              className={indexStyles.header_logoImg}
+            />
+          </div>
+          <h3 className={`${indexStyles.heading_3}`}>Your own home:</h3>
+          <h1 className={indexStyles.heading_1}>
+            The ultimate personal freedom
+          </h1>
+          <button className={`${indexStyles.btn} ${indexStyles.header_btn}`}>
+            View our properties
+          </button>
+          <div className={indexStyles.header_seenOn___text}>As seen on</div>
+          <div className={indexStyles.header_seenOn___logos}>
+            <Img fluid={data.logoOne.childImageSharp.fluid} alt="logo" className={indexStyles.header_seenOn___logos___one} />
+            <Img fluid={data.logoTwo.childImageSharp.fluid} alt="logo" className={indexStyles.header_seenOn___logos___two}/>
+            <Img fluid={data.logoThree.childImageSharp.fluid} alt="logo" className={indexStyles.header_seenOn___logos___three}/>
+            <Img fluid={data.logoFour.childImageSharp.fluid} alt="logo" className={indexStyles.header_seenOn___logos___four} />
+          </div>
+        </header>
 
         <div className={indexStyles.realtors}>Top 3 realtors</div>
 
@@ -569,16 +639,38 @@ const IndexPage = () => {
 
         <footer className={indexStyles.footer}>
           <ul className={indexStyles.nav}>
-            <li className={indexStyles.nav_item}><a href="#" className={indexStyles.nav_link}>Find your dream home</a></li>
-            <li className={indexStyles.nav_item}><a href="#" className={indexStyles.nav_link}>Request proposal</a></li>
-            <li className={indexStyles.nav_item}><a href="#" className={indexStyles.nav_link}>Download home planner</a></li>
-            <li className={indexStyles.nav_item}><a href="#" className={indexStyles.nav_link}>Contact us</a></li>
-            <li className={indexStyles.nav_item}><a href="#" className={indexStyles.nav_link}>Submit your property</a></li>
-            <li className={indexStyles.nav_item}><a href="#" className={indexStyles.nav_link}>Come work with us!</a></li>
+            <li className={indexStyles.nav_item}>
+              <a href="#" className={indexStyles.nav_link}>
+                Find your dream home
+              </a>
+            </li>
+            <li className={indexStyles.nav_item}>
+              <a href="#" className={indexStyles.nav_link}>
+                Request proposal
+              </a>
+            </li>
+            <li className={indexStyles.nav_item}>
+              <a href="#" className={indexStyles.nav_link}>
+                Download home planner
+              </a>
+            </li>
+            <li className={indexStyles.nav_item}>
+              <a href="#" className={indexStyles.nav_link}>
+                Contact us
+              </a>
+            </li>
+            <li className={indexStyles.nav_item}>
+              <a href="#" className={indexStyles.nav_link}>
+                Submit your property
+              </a>
+            </li>
+            <li className={indexStyles.nav_item}>
+              <a href="#" className={indexStyles.nav_link}>
+                Come work with us!
+              </a>
+            </li>
           </ul>
-          <p className={indexStyles.copyright}>
-            &copy; Copyright 2020
-          </p>
+          <p className={indexStyles.copyright}>&copy; Copyright 2020</p>
         </footer>
       </div>
     </Fragment>
