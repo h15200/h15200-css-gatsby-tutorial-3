@@ -222,6 +222,27 @@ const IndexPage = () => {
           }
         }
       }
+      realtorOne: file(relativePath: { eq: "realtor-1.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      realtorTwo: file(relativePath: { eq: "realtor-2.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      realtorThree: file(relativePath: { eq: "realtor-3.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   return (
@@ -255,14 +276,75 @@ const IndexPage = () => {
           </button>
           <div className={indexStyles.header_seenOn___text}>As seen on</div>
           <div className={indexStyles.header_seenOn___logos}>
-            <Img fluid={data.logoOne.childImageSharp.fluid} alt="logo" className={indexStyles.header_seenOn___logos___one} />
-            <Img fluid={data.logoTwo.childImageSharp.fluid} alt="logo" className={indexStyles.header_seenOn___logos___two}/>
-            <Img fluid={data.logoThree.childImageSharp.fluid} alt="logo" className={indexStyles.header_seenOn___logos___three}/>
-            <Img fluid={data.logoFour.childImageSharp.fluid} alt="logo" className={indexStyles.header_seenOn___logos___four} />
+            <Img
+              fluid={data.logoOne.childImageSharp.fluid}
+              alt="logo"
+              className={indexStyles.header_seenOn___logos___one}
+            />
+            <Img
+              fluid={data.logoTwo.childImageSharp.fluid}
+              alt="logo"
+              className={indexStyles.header_seenOn___logos___two}
+            />
+            <Img
+              fluid={data.logoThree.childImageSharp.fluid}
+              alt="logo"
+              className={indexStyles.header_seenOn___logos___three}
+            />
+            <Img
+              fluid={data.logoFour.childImageSharp.fluid}
+              alt="logo"
+              className={indexStyles.header_seenOn___logos___four}
+            />
           </div>
         </header>
 
-        <div className={indexStyles.realtors}>Top 3 realtors</div>
+        <div className={indexStyles.realtors}>
+          <h3 className={indexStyles.heading_3}>Top 3 Realtors</h3>
+          <div className={indexStyles.realtors_list}>
+            <Img
+              fluid={data.realtorOne.childImageSharp.fluid}
+              alt="Realtor 1"
+              className={indexStyles.realtors_img}
+            />
+            <div className={indexStyles.realtors_detail}>
+              <h4
+                className={`${indexStyles.heading_4} ${indexStyles.heading_4___light}`}
+              >
+                Erik Feinman
+              </h4>
+              <p className={indexStyles.realtors_sold}>245 Houses Sold</p>
+            </div>
+
+            <Img
+              fluid={data.realtorTwo.childImageSharp.fluid}
+              alt="Realtor 2"
+              className={indexStyles.realtors_img}
+            />
+            <div className={indexStyles.realtors_detail}>
+              <h4
+                className={`${indexStyles.heading_4} ${indexStyles.heading_4___light}`}
+              >
+                Kim Brown
+              </h4>
+              <p className={indexStyles.realtors_sold}>235 Houses Sold</p>
+            </div>
+
+            <Img
+              fluid={data.realtorThree.childImageSharp.fluid}
+              alt="Realtor 3"
+              className={indexStyles.realtors_img}
+            />
+            <div className={indexStyles.realtors_detail}>
+              <h4
+                className={`${indexStyles.heading_4} ${indexStyles.heading_4___light}`}
+              >
+                Toby Ramsey
+              </h4>
+              <p className={indexStyles.realtors_sold}>198 Houses Sold</p>
+            </div>
+          </div>
+        </div>
 
         <section className={indexStyles.features}>
           <div className={indexStyles.feature}>
