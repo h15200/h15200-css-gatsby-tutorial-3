@@ -2,6 +2,10 @@
   background-color: $color-secondary;
   grid-column: col-start 7 / full-end;
   padding: 2rem;
+
+  @media only screen and (max-Width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
   
   display: grid;
   align-content: center;
@@ -16,6 +20,15 @@
     column-gap: 1.25rem;
     row-gap: 5vh;
     align-items: center;
+    
+    @media only screen and (max-Width: $bp-medium) {
+      grid-template-columns: repeat(3, min-content max-content);
+    
+    }
+
+    @media only screen and (max-Width: $bp-small) {
+      grid-template-columns: min-content max-content;
+    }
   }
 
   &_img {
@@ -24,11 +37,9 @@
 
   }
 
-  &_detail {
-
-  }
 
   &_sold {
+    font-size: .75rem;
     text-transform: uppercase;
     color: $color-grey-light-2;
     margin-top: -3px;

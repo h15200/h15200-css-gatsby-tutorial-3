@@ -5,6 +5,12 @@
 
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    justify-content: end;
+  }
 }
 
 .nav_btn {
@@ -17,7 +23,7 @@
 
   position: relative;
 
-
+  
   &::before,
   &::after {
     display: block;
@@ -26,12 +32,22 @@
     width: 2.8125rem;
     content: ''
   }
-
+  
   &::before {
     transform: translateY(-.92rem);
   }
-
+  
   &::after {
     transform: translateY(.82rem);
   }
+        @media only screen and (max-width: $bp-large) {
+          margin-right: 1.3rem;
+          &::before {
+            transform: translateY(-.72rem);
+          }
+          
+          &::after {
+            transform: translateY(.62rem);
+          }
+        }
 }

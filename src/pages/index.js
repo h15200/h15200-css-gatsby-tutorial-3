@@ -182,7 +182,7 @@ const IndexPage = () => {
       }
       headerLogo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fluid {
+          fluid (maxWidth: 200) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -623,7 +623,7 @@ const IndexPage = () => {
             <Heart className={indexStyles.home_like} />
             <h5 className={indexStyles.home_name}>Modern Family Apartment</h5>
             <div className={indexStyles.home_location}>
-              <Pin className={indexStyles.home_location___pin} />
+              <Pin className={indexStyles.home_location___icon} />
               <p className={indexStyles.home_location___text}>Italy</p>
             </div>
             <div className={indexStyles.home_rooms}>

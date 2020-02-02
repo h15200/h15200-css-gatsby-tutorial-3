@@ -1,12 +1,16 @@
 .features {
   grid-column: center-start / center-end;
-
-  margin: 1rem 0;
+  margin: 9.375rem 0;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15.6rem, 1fr)); // 15.6rem is derived from the big grid in index, then calculating for max 3 grids
   gap: 3.75rem;
   align-items: start;
+
+  @media only screen and (max-Width: $bp-medium) {
+    margin: 7rem 0;
+  }      
+
   
 }
 

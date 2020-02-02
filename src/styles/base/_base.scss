@@ -1,6 +1,10 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
+
+  @media only screen and (max-Width: $bp-largest) { 
+    font-size: 80%;
+  }
 }
 
 *, *::before, *::after {
@@ -53,6 +57,7 @@ body {
 .heading_4 {
   @extend %heading;
   font-size: 1.1875rem;
+  
 
   &___light {
     color: $color-grey-light-1;

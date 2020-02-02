@@ -6,6 +6,16 @@
   grid-template-columns: [sidebar-start] 5rem [sidebar-end full-start] minmax(3.75rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 8rem) [col-end]) [center-end] minmax(3.75rem,1fr) [full-end];
 
 
+  @media only screen and (max-Width: $bp-large) {
+    grid-template-columns: [full-start] minmax(3.75rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 8rem) [col-end]) [center-end] minmax(3.75rem,1fr) [full-end];
+    grid-template-rows: 3.75rem 80vh min-content 40vw repeat(3, min-content);
+  }
+
+  @media only screen and (max-Width: $bp-medium) {
+    grid-template-rows: 3.75rem calc(100vh - 3.75rem) 
+  }
+
+  
 }
 
 
